@@ -1,0 +1,5 @@
+Precip	Max Temp	Min Temp	Wind Speed
+2	2	2	0
+15	14	2	2
+0	4	4	0
+0	7	7	0
