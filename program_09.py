@@ -113,8 +113,8 @@ def Check04_TmaxTminRange( DataDF, ReplacedValuesDF ):
              DataDF.iloc[i,1]=np.nan
              DataDF.iloc[i,2]=np.nan
              
-    ReplacedValuesDF.iloc[3,1]=DataDF['Max Temp'].isna().sum()-ReplacedValuesDF.iloc[1,1]
-    ReplacedValuesDF.iloc[3,2]=DataDF['Min Temp'].isna().sum()-ReplacedValuesDF.iloc[1,2]
+    ReplacedValuesDF.iloc[3,1]=DataDF['Max Temp'].isna().sum()-(ReplacedValuesDF.iloc[1,1]+ReplacedValuesDF.iloc[0,1])
+    ReplacedValuesDF.iloc[3,2]=DataDF['Min Temp'].isna().sum()-(ReplacedValuesDF.iloc[1,2]+ReplacedValuesDF.iloc[0,2])
 
 
     return( DataDF, ReplacedValuesDF )
